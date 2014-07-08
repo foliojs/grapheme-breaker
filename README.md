@@ -1,5 +1,5 @@
 # grapheme-breaker
-A JavaScript implementation of the Unicode grapheme cluster breaking algorithm (UAX #29)
+A JavaScript implementation of the Unicode grapheme cluster breaking algorithm ([UAX #29](http://www.unicode.org/reports/tr29/#Grapheme_Cluster_Boundaries))
 
 > It is important to recognize that what the user thinks of as a “character”—a basic unit of a writing system for a 
 > language—may not be just a single Unicode code point. Instead, that basic unit may be made up of multiple Unicode 
