@@ -23,13 +23,11 @@ request "#{BASE_URL}/auxiliary/GraphemeBreakProperty.txt", (err, res, data) ->
     type = match[3]
     unless classes[type]?
       classes[type] = nextClass++
-      console.log type, classes[type]
         
     trie.setRange parseInt(start, 16), parseInt(end, 16), classes[type]
 
   # write the trie to a file
   frozen = trie.freeze()
-  frozen.data = [frozen.data...]
   fs.writeFile __dirname + '/class_trie.json', JSON.stringify frozen
   
   # write classes to a file
