@@ -7,7 +7,7 @@
     "test": "test"
   },
   "dependencies": {
-    "unicode-trie": "^0.1.1"
+    "unicode-trie": "^0.1.2"
   },
   "devDependencies": {
     "chai": "^1.9.1",
