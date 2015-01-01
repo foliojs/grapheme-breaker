@@ -27,8 +27,7 @@ request "#{BASE_URL}/auxiliary/GraphemeBreakProperty.txt", (err, res, data) ->
     trie.setRange parseInt(start, 16), parseInt(end, 16), classes[type]
 
   # write the trie to a file
-  frozen = trie.freeze()
-  fs.writeFile __dirname + '/class_trie.json', JSON.stringify frozen
+  fs.writeFile __dirname + '/classes.trie', trie.toBuffer()
   
   # write classes to a file
   fs.writeFile __dirname + '/classes.json', JSON.stringify classes

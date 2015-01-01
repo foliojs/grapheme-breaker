@@ -1,6 +1,7 @@
 {CR,LF,Control,Extend,Regional_Indicator,SpacingMark,L,V,T,LV,LVT} = require './classes.json'
 UnicodeTrie = require 'unicode-trie'
-classTrie = new UnicodeTrie require './class_trie.json'
+fs = require 'fs'
+classTrie = new UnicodeTrie fs.readFileSync __dirname + '/classes.trie'
 
 # Gets a code point from a UTF-16 string
 # handling surrogate pairs appropriately

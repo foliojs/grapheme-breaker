@@ -7,7 +7,8 @@
     "test": "test"
   },
   "dependencies": {
-    "unicode-trie": "^0.1.2"
+    "unicode-trie": "^0.2.0",
+    "brfs": "^1.2.0"
   },
   "devDependencies": {
     "chai": "^1.9.1",
@@ -19,6 +20,11 @@
     "test": "mocha",
     "prepublish": "coffee -c src/",
     "postpublish": "rm -rf src/*.js"
+  },
+  "browserify": {
+    "transform": [
+      "brfs"
+    ]
   },
   "repository": {
     "type": "git",
