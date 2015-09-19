@@ -2,10 +2,10 @@ request = require 'request'
 fs = require 'fs'
 UnicodeTrieBuilder = require 'unicode-trie/builder'
 
-UNICODE_VERSION = '7.0.0'
+UNICODE_VERSION = '8.0.0'
 BASE_URL = "http://www.unicode.org/Public/#{UNICODE_VERSION}/ucd"
 
-# this loads the GraphemeBreakProperty.txt file for Unicode 7.0.0 and parses it to
+# this loads the GraphemeBreakProperty.txt file for Unicode 8.0.0 and parses it to
 # combine ranges and generate CoffeeScript
 request "#{BASE_URL}/auxiliary/GraphemeBreakProperty.txt", (err, res, data) ->
   re = /^([0-9A-F]+)(?:\.\.([0-9A-F]+))?\s*;\s*([A-Za-z_]+)/gm
