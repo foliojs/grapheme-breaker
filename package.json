@@ -7,8 +7,8 @@
     "test": "test"
   },
   "dependencies": {
-    "unicode-trie": "^0.2.0",
-    "brfs": "^1.2.0"
+    "brfs": "^1.2.0",
+    "unicode-trie": "^0.3.1"
   },
   "devDependencies": {
     "chai": "^1.9.1",
